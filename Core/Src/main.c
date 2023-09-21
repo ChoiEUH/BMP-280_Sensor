@@ -125,7 +125,7 @@ int main(void)
 	   HAL_UART_Transmit(&huart2, data, size, 1000);
 	   HAL_Delay(2000);
    }
-   size = sprintf((char *)data, "pressure:%.2f pa, Temperature: %d C", pressure, temperature);
+   size = sprintf((char *)data, "pressure:%f pa, Temperature: %f C", pressure, temperature);
    HAL_UART_Transmit (&huart2, data, size, 1000);
    if(bme280p){
      size = sprintf((char *)data, "humidity: %.2f\r\n",humidity);
